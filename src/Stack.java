@@ -1,19 +1,51 @@
-/**
- * Interface para las funciones de Stack de las operaciones del compilador.
- */
+/***
+* Clase con un vector genérico para dar herramientas de manipulación del vector.
+*/
 
+import java.util.Vector;
 
-public interface Stack<T> {
+public class Stack<T> implements IStack<T>{
 
-    void push(T num); //Agregar.
+    Vector <T> stack = new Vector<T>();
 
-    T pop(); //Eliminar el último valor del vector.
+    // agregar un elemento al vector
+    @Override
+    public void push(T num) {
+        stack.add(num);
+    }
 
-    T peek(); //Toma el valor.
+    // Elimina el último valor del vector.
+    @Override
+    public T pop() {
+        T num = peek();
+        stack.removeElementAt(stack.size()-1);
+        return num;
+    }
 
-    int size(); //Retorna el tamaño del vector.
+    //Devuelve el último elemento del vector.
+    @Override
+    public T peek() {
+        return stack.get(stack.size()-1);
+    }
 
-    boolean empty(); //Devuelve el estado del vector.
+    //Retorna el tamaño del vector.
+    @Override
+    public int size() {
+        return stack.size();
+    }
 
+    //Devuelve el estado del vector.
+    @Override
+    public boolean empty() {
+        boolean cantidad = false;
+        if (stack.size()==0){
+            cantidad = true;
+        }
+        return cantidad;
+    }
 
+    //Limpia el vetor.
+    public void limp(){
+        stack.clear();
+    }
 }

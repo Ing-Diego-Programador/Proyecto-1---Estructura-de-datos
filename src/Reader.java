@@ -23,6 +23,6 @@ public class Reader {
                 }
                 v.add(temp);
             }
-        }catch(Exception e){System.out.println("archivo no encontrado");}
+        }catch(Exception e){System.out.println("No se encontro el archivo...");}
     } 
 }
