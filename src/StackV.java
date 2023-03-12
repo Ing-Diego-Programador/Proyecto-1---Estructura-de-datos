@@ -4,7 +4,7 @@
 
 import java.util.Vector;
 
-public class Stack<T> implements IStack<T>{
+public class StackV<T> implements IStack<T>{
 
     Vector <T> stack = new Vector<T>();
 
