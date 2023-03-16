@@ -1,19 +1,19 @@
-/**
- * Interface para las funciones de Stack de las operaciones del compilador.
- */
-
 
 public interface IStack<T> {
 
-    void push(T num); //Agregar.
+    //Agregar un elemento al vector.
+    void push(T num);
 
-    T pop(); //Eliminar el último valor del vector.
+    //Se quita el últomo valor del vector.
+    T pop();
 
-    T peek(); //Toma el valor.
+    //Se retorna la cantidad de elementos del vector.
+    int size();
+    
+    //Get
+    T peek();
 
-    int size(); //Retorna el tamaño del vector.
-
-    boolean empty(); //Devuelve el estado del vector.
-
+    //Verificar si el vector está vacío.
+    boolean empty();
 
 }

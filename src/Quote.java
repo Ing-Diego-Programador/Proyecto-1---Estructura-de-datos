@@ -1,8 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Quote {
-
-    //Recibe el string a analizar y revuelve el string a imprimir.
+    
+    //Clase Quote que imprime el contenido de .txt
+    //Como parametro está el string a analizar y se revuelve el string a imprimir.
     public static String quote(String imp){
         
         String str1 = "";
@@ -15,19 +16,18 @@ public class Quote {
             }
         }
 
-        //Dando split de espacio vacío a la expresión.
-        String[] str2 = str1.split(" "); //Dando espacios vacíos entre cada elemento que se agrega al Array.
-
+        //Dando espacios vacíos entre cada elemento que se agrega al Array.
+        String[] str2 = str1.split(" ");
         //ArrayList para los datos que se van a stqertir.
         ArrayList<String> stq = new ArrayList<String>();  
-
-        String c = ""; 
-        
         //Agregando de manera normal los valores del archivo datos.txt.
         for (int n = 1; n <str2.length; n++) { 
-            stq.add(String.valueOf(str2[n])); //Añadiendo los elementos a invertir en el ArrayList.
+            //Añadiendo los elementos a invertir en el ArrayList.
+            stq.add(String.valueOf(str2[n])); 
         }
                 
+        String c = ""; 
+
         for(int i = 0; i < stq.size(); i++){
             c = c + stq.get(i) + " ";
         }
