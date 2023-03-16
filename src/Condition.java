@@ -1,7 +1,4 @@
 //Librerias
-import java.util.Scanner;
-import java.io.*;
-import java.util.Vector;
 import java.util.ArrayList;
 import java.util.Collections;
 
